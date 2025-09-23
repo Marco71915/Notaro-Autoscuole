@@ -80,10 +80,7 @@
       cursor: pointer;
     }
 
-    .store-btn:hover {
-      transform: scale(1.03);
-    }
-
+    .store-btn:hover { transform: scale(1.03); }
     .store-btn.android { background-color: #7ed957; }
     .store-btn.ios { background-color: #f9e43d; }
     .store-btn .apple-icon { position: relative; top: -2px; }
@@ -92,16 +89,18 @@
     .servizi-container {
       display: flex;
       justify-content: space-between;
-      flex-wrap: nowrap; /* non andare a capo */
+      flex-wrap: nowrap;
       margin: 40px auto;
       max-width: 900px;
       text-align: center;
     }
 
     .colonna {
-      flex: 0 0 45%; /* larghezza fissa per mantenere due colonne affiancate */
       margin: 10px;
     }
+
+    .colonna.sinistra { flex: 0 0 45%; }
+    .colonna.destra { flex: 0 0 42%; } /* leggermente più stretta e spostata a sinistra */
 
     .titolo-blu {
       color: #0056b3;
@@ -117,9 +116,7 @@
       text-align: left;
     }
 
-    ul li {
-      margin-bottom: 6px;
-    }
+    ul li { margin-bottom: 6px; }
 
     .indirizzi {
       max-width: 900px;
@@ -138,37 +135,27 @@
       display: inline-block;
       text-align: left;
     }
-
-    /* Stile per sotto-indirizzi */
-    .sotto-indirizzo {
-      margin-left: 20px;
-    }
   </style>
 </head>
 <body>
 
-  <!-- Logo principale -->
   <img src="logo.png" alt="Logo Notaro Autoscuole" class="logo" />
 
-  <!-- Bottone Google Recensioni -->
   <a class="link-button" href="https://tinyurl.com/4f358y3w" target="_blank" rel="noopener noreferrer">
     <img class="icon" src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt="Google" />
     Lasciaci una Recensione
   </a>
 
-  <!-- Bottone Instagram -->
   <div class="link-button" id="instagramButton" role="button" tabindex="0">
     <img class="icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
     Seguici su Instagram
   </div>
 
-  <!-- Bottone Facebook -->
   <a class="link-button" href="https://www.facebook.com/profile.php?id=100064902188800" target="_blank">
     <img class="icon" src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
     Seguici su Facebook
   </a>
 
-  <!-- Bottone Contattaci -->
   <a class="link-button" href="tel:098127696">
     <img class="icon phone-icon" src="https://cdn-icons-png.flaticon.com/128/9946/9946341.png" alt="Telefono" />
     Contattaci
@@ -176,10 +163,8 @@
 
   <hr>
 
-  <!-- Logo 2 -->
   <img src="logo2.png" alt="Logo 2" class="logo2">
 
-  <!-- Pulsanti App Store -->
   <a href="https://play.google.com/store/apps/details?id=it.aci.informatica.quiz2go" class="store-btn android">
     <img class="icon" src="https://cdn-icons-png.flaticon.com/128/14/14415.png" alt="Android">
     Scarica l'APP su Android
@@ -189,9 +174,8 @@
     Scarica l'APP su iPhone
   </a>
 
-  <!-- Sezione Servizi -->
   <div class="servizi-container">
-    <div class="colonna">
+    <div class="colonna sinistra">
       <h2 class="titolo-blu">COSTI REVISIONE VEICOLI</h2>
       <ul>
         <li>Revisioni per i veicoli superiori a 3,5t</li>
@@ -201,7 +185,7 @@
       </ul>
     </div>
 
-    <div class="colonna">
+    <div class="colonna destra">
       <h2 class="titolo-blu">CONSULENZA AUTOMOBILISTICA DELEGAZIONE</h2>
       <ul>
         <li>Pagamenti Bollo Auto</li>
@@ -216,15 +200,12 @@
 
   <hr>
 
-  <!-- Sezione Indirizzi -->
   <div class="indirizzi">
     <h2>Sedi</h2>
     <ul>
       <li>
         CASTROVILLARI (CS) Via XX Settembre, 25/27 - Tel/Fax 0981 27696
-        <div class="sotto-indirizzo">
-          Viale del Lavoro, 10/12 - Tel. 0981 44035
-        </div>
+        Viale del Lavoro, 10/12 - Tel. 0981 44035
       </li>
       <li>MORANO CALABBRO (CS) Via G.Scorza</li>
       <li>LAINO BORGO (CS) Viale San Biagio, 25 - Tel. 0981 82173</li>
