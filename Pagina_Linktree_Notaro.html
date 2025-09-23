@@ -53,14 +53,14 @@
 
     /* Linea divisoria nera */
     hr {
-      margin: 40px auto 20px; /* ridotto spazio sotto */
+      margin: 40px auto 20px;
       width: 80%;
       border: 1px solid #000000;
     }
 
-    /* Logo 2 più vicino alla linea */
+    /* Logo 2 */
     .logo2 {
-      margin: 10px auto 20px; /* meno spazio sopra */
+      margin: 10px auto 20px;
       max-width: 200px;
       display: block;
     }
@@ -87,19 +87,70 @@
       transform: scale(1.03);
     }
 
-    /* Colori personalizzati per Android e iPhone */
     .store-btn.android {
-      background-color: #7ed957; /* verdino chiaro */
+      background-color: #7ed957;
     }
 
     .store-btn.ios {
-      background-color: #f9e43d; /* giallino chiaro */
+      background-color: #f9e43d;
     }
 
-    /* Icona Apple leggermente più in alto */
     .store-btn .apple-icon {
       position: relative;
       top: -2px;
+    }
+
+    /* Sezione servizi centrata */
+    .servizi-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 40px auto;
+      max-width: 900px;
+      text-align: center;
+    }
+
+    .colonna {
+      flex: 1;
+      min-width: 280px;
+      margin: 10px;
+    }
+
+    .titolo-blu {
+      color: #0056b3;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 0;
+      color: black;
+      display: inline-block; /* per centrare i punti */
+      text-align: left;      /* punti allineati tra loro */
+    }
+
+    ul li {
+      margin-bottom: 6px;
+    }
+
+    /* Sezione indirizzi centrata */
+    .indirizzi {
+      max-width: 900px;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .indirizzi h2 {
+      color: #0056b3;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .indirizzi ul {
+      padding-left: 0;
+      display: inline-block;
+      text-align: left;
     }
   </style>
 </head>
@@ -134,7 +185,7 @@
   <!-- Linea divisoria nera -->
   <hr>
 
-  <!-- Predisposizione per Logo 2 -->
+  <!-- Logo 2 -->
   <img src="logo2.png" alt="Logo 2" class="logo2">
 
   <!-- Pulsanti App Store -->
@@ -146,6 +197,51 @@
     <img class="icon apple-icon" src="https://cdn-icons-png.flaticon.com/128/15785/15785097.png" alt="Apple">
     Scarica l'APP su iPhone
   </a>
+
+  <!-- Sezione Servizi -->
+  <div class="servizi-container">
+    <!-- Colonna sinistra -->
+    <div class="colonna">
+      <h2 class="titolo-blu">COSTI REVISIONE VEICOLI</h2>
+      <ul>
+        <li>Revisioni per i veicoli superiori a 3,5t</li>
+        <li>Trasformazioni</li>
+        <li>Collaudi impianti GPL</li>
+        <li>Ganci traino e carrelli</li>
+      </ul>
+    </div>
+
+    <!-- Colonna destra -->
+    <div class="colonna">
+      <h2 class="titolo-blu">CONSULENZA AUTOMOBILISTICA DELEGAZIONE</h2>
+      <ul>
+        <li>Pagamenti Bollo Auto</li>
+        <li>Passaggi di proprietà</li>
+        <li>Duplicati Patente</li>
+        <li>Rinnovo Patente</li>
+        <li>Licenza di trasporto</li>
+        <li>Visure PRA</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Linea divisoria nera -->
+  <hr>
+
+  <!-- Sezione Indirizzi -->
+  <div class="indirizzi">
+    <h2>Sedi</h2>
+    <ul>
+      <li>
+        CASTROVILLARI (CS) Via XX Settembre, 25/27 - Tel/Fax 0981 27696
+        <div style="margin-left:170px;">
+	  Viale del Lavoro, 10/12 - Tel. 0981 44035
+        </div>
+      </li>
+      <li>MORANO CALABBRO (CS) Via G.Scorza</li>
+      <li>LAINO BORGO (CS) Viale San Biagio, 25 - Tel. 0981 82173</li>
+    </ul>
+  </div>
 
   <script>
     document.getElementById('instagramButton').addEventListener('click', function () {
