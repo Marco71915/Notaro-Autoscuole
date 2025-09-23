@@ -51,21 +51,18 @@
       margin-right: 12px;
     }
 
-    /* Linea divisoria nera */
     hr {
       margin: 40px auto 20px;
       width: 80%;
       border: 1px solid #000000;
     }
 
-    /* Logo 2 */
     .logo2 {
       margin: 10px auto 20px;
       max-width: 200px;
       display: block;
     }
 
-    /* Pulsanti store */
     .store-btn {
       display: flex;
       align-items: center;
@@ -87,32 +84,22 @@
       transform: scale(1.03);
     }
 
-    .store-btn.android {
-      background-color: #7ed957;
-    }
+    .store-btn.android { background-color: #7ed957; }
+    .store-btn.ios { background-color: #f9e43d; }
+    .store-btn .apple-icon { position: relative; top: -2px; }
 
-    .store-btn.ios {
-      background-color: #f9e43d;
-    }
-
-    .store-btn .apple-icon {
-      position: relative;
-      top: -2px;
-    }
-
-    /* Sezione servizi centrata */
+    /* Sezione servizi affiancate */
     .servizi-container {
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      flex-wrap: nowrap; /* non andare a capo */
       margin: 40px auto;
       max-width: 900px;
       text-align: center;
     }
 
     .colonna {
-      flex: 1;
-      min-width: 280px;
+      flex: 0 0 45%; /* larghezza fissa per mantenere due colonne affiancate */
       margin: 10px;
     }
 
@@ -126,15 +113,14 @@
       list-style-type: disc;
       padding-left: 0;
       color: black;
-      display: inline-block; /* per centrare i punti */
-      text-align: left;      /* punti allineati tra loro */
+      display: inline-block;
+      text-align: left;
     }
 
     ul li {
       margin-bottom: 6px;
     }
 
-    /* Sezione indirizzi centrata */
     .indirizzi {
       max-width: 900px;
       margin: 20px auto;
@@ -152,9 +138,15 @@
       display: inline-block;
       text-align: left;
     }
+
+    /* Stile per sotto-indirizzi */
+    .sotto-indirizzo {
+      margin-left: 20px;
+    }
   </style>
 </head>
 <body>
+
   <!-- Logo principale -->
   <img src="logo.png" alt="Logo Notaro Autoscuole" class="logo" />
 
@@ -182,7 +174,6 @@
     Contattaci
   </a>
 
-  <!-- Linea divisoria nera -->
   <hr>
 
   <!-- Logo 2 -->
@@ -200,7 +191,6 @@
 
   <!-- Sezione Servizi -->
   <div class="servizi-container">
-    <!-- Colonna sinistra -->
     <div class="colonna">
       <h2 class="titolo-blu">COSTI REVISIONE VEICOLI</h2>
       <ul>
@@ -211,7 +201,6 @@
       </ul>
     </div>
 
-    <!-- Colonna destra -->
     <div class="colonna">
       <h2 class="titolo-blu">CONSULENZA AUTOMOBILISTICA DELEGAZIONE</h2>
       <ul>
@@ -225,7 +214,6 @@
     </div>
   </div>
 
-  <!-- Linea divisoria nera -->
   <hr>
 
   <!-- Sezione Indirizzi -->
@@ -234,8 +222,8 @@
     <ul>
       <li>
         CASTROVILLARI (CS) Via XX Settembre, 25/27 - Tel/Fax 0981 27696
-        <div style="margin-left:170px;">
-	  Viale del Lavoro, 10/12 - Tel. 0981 44035
+        <div class="sotto-indirizzo">
+          Viale del Lavoro, 10/12 - Tel. 0981 44035
         </div>
       </li>
       <li>MORANO CALABBRO (CS) Via G.Scorza</li>
@@ -258,5 +246,6 @@
       }, 1000);
     }
   </script>
+
 </body>
 </html>
