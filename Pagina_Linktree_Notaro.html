@@ -209,4 +209,13 @@
     function openAppOrWeb(appUrl, webUrl) {
       const start = Date.now();
       window.location = appUrl;
-      setTimeout(function()
+      setTimeout(function() {
+        if (Date.now() - start < 1500) {
+          window.open(webUrl, '_blank');
+        }
+      }, 1000);
+    }
+  </script>
+
+</body>
+</html>
