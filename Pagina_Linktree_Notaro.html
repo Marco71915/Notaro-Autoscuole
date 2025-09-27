@@ -74,11 +74,10 @@
     .store-btn.ios { background-color: #f9e43d; }
     .store-btn .apple-icon { position: relative; top: -2px; }
 
-    /* Sezione servizi centrata */
     .servizi-container {
       display: flex;
-      flex-direction: column; /* colonne una sotto l'altra */
-      align-items: center;    /* centrato orizzontalmente */
+      flex-direction: column;
+      align-items: center;
       margin: 40px auto;
       max-width: 900px;
     }
@@ -87,7 +86,7 @@
       margin: 10px 0;
       width: 90%;
       max-width: 400px;
-      text-align: center; /* centro tutto il contenuto */
+      text-align: center;
     }
 
     .titolo-blu {
@@ -100,8 +99,8 @@
       list-style-type: disc;
       padding-left: 0;
       color: black;
-      text-align: center;      /* centra le voci */
-      list-style-position: inside; /* fa sì che i puntini siano centrati con il testo */
+      text-align: center;
+      list-style-position: inside;
     }
 
     ul li {
@@ -129,28 +128,23 @@
 </head>
 <body>
 
-  <!-- Logo principale -->
   <img src="logo.png" alt="Logo Notaro Autoscuole" class="logo" />
 
-  <!-- Bottone Google Recensioni -->
   <a class="link-button" href="https://search.google.com/local/writereview?placeid=ChIJ9bw8titAPxMRiyujyR0qdPE" target="_blank" rel="noopener noreferrer">
     <img class="icon" src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt="Google" />
     Lasciaci una Recensione
   </a>
 
-  <!-- Bottone Instagram -->
   <div class="link-button" id="instagramButton" role="button" tabindex="0">
     <img class="icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
     Seguici su Instagram
   </div>
 
-  <!-- Bottone Facebook -->
   <a class="link-button" href="https://www.facebook.com/profile.php?id=100064902188800" target="_blank">
     <img class="icon" src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
     Seguici su Facebook
   </a>
 
-  <!-- Bottone Contattaci -->
   <a class="link-button" href="tel:098127696">
     <img class="icon phone-icon" src="https://cdn-icons-png.flaticon.com/128/9946/9946341.png" alt="Telefono" />
     Contattaci
@@ -158,10 +152,8 @@
 
   <hr>
 
-  <!-- Logo 2 -->
   <img src="logo2.png" alt="Logo 2" class="logo2">
 
-  <!-- Pulsanti App Store -->
   <a href="https://play.google.com/store/apps/details?id=it.aci.informatica.quiz2go" class="store-btn android">
     <img class="icon" src="https://cdn-icons-png.flaticon.com/128/14/14415.png" alt="Android">
     Scarica l'APP su Android
@@ -171,43 +163,41 @@
     Scarica l'APP su iPhone
   </a>
 
-  <!-- Sezione Servizi -->
   <div class="servizi-container">
     <div class="colonna">
       <h2 class="titolo-blu">CENTRO REVISIONE VEICOLI</h2>
       <ul>
-        <li>Revisioni per i veicoli superiori a 3,5t</li>
+        <li>Revisioni per veicoli superiori a 3,5t</li>
         <li>Trasformazioni</li>
-        <li>Collaudi impianti GPL</li>
+        <li>Collaudo impianti GPL</li>
         <li>Ganci traino e carrelli</li>
       </ul>
     </div>
 
     <div class="colonna">
-      <h2 class="titolo-blu">CONSULENZA AUTOMOBILISTICA DELEGAZIONE</h2>
+      <!-- Logo3 sopra il titolo, più vicino -->
+      <img src="logo3.png" alt="Logo 3" style="max-width:150px; margin-bottom:5px;">
+      <h2 class="titolo-blu">DELEGAZIONE DI CASTROVILLARI</h2>
       <ul>
-        <li>Pagamenti Bollo Auto</li>
-        <li>Passaggi di proprietà</li>
-        <li>Duplicati Patente</li>
-        <li>Rinnovo Patente</li>
-        <li>Licenza di trasporto</li>
-        <li>Visure PRA</li>
+        <li>Bollo Auto</li>
+        <li>Sportello Telematico</li>
+        <li>Pratiche Auto</li>
+        <li>Centro Revisioni</li>
       </ul>
     </div>
   </div>
 
   <hr>
 
-  <!-- Sezione Indirizzi -->
   <div class="indirizzi">
     <h2>Sedi</h2>
     <ul>
       <li>
-        CASTROVILLARI (CS) Via XX Settembre, 25/27 - Tel/Fax 0981 27696<br>
-        Viale del Lavoro, 10/12 - Tel. 0981 44035
+        <b>CASTROVILLARI (CS)</b> Via XX Settembre, 25/27 - Tel/Fax 0981 27696<br>
+        Viale del Lavoro, 10/12
       </li>
-      <li>MORANO CALABRO (CS) Via G.Scorza</li>
-      <li>LAINO BORGO (CS) Viale San Biagio, 25 - Tel. 0981 82173</li>
+      <li><b>MORANO CALABRO (CS)</b> Via G.Scorza</li>
+      <li><b>LAINO BORGO (CS)</b> Corso Umbero I, 26/28</li>
     </ul>
   </div>
 
@@ -219,13 +209,4 @@
     function openAppOrWeb(appUrl, webUrl) {
       const start = Date.now();
       window.location = appUrl;
-      setTimeout(function() {
-        if (Date.now() - start < 1500) {
-          window.open(webUrl, '_blank');
-        }
-      }, 1000);
-    }
-  </script>
-
-</body>
-</html>
+      setTimeout(function()
